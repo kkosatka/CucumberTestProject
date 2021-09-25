@@ -1,0 +1,53 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-25T04:04:47.573Z",
+        "line": 2,
+        "name": "Write Hello World",
+        "description": "",
+        "id": "validate-\"hello-world\"-word-is-printing;write-hello-world",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 3,
+            "name": "The user is having a new project",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 51000,
+              "status": "skipped"
+            },
+            "line": 4,
+            "name": "The user writes Hello World test",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 30000,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "The user should be able to run it and see printed String",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Validate \"Hello World\" word is printing",
+    "description": "",
+    "id": "validate-\"hello-world\"-word-is-printing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/feature/HelloWorld.feature",
+    "tags": []
+  }
+]
