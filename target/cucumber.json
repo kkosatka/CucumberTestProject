@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-09-25T04:04:47.573Z",
+        "start_timestamp": "2021-09-25T04:26:54.488Z",
         "line": 2,
         "name": "Write Hello World",
         "description": "",
@@ -13,31 +13,38 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 2858000,
+              "status": "passed"
             },
             "line": 3,
             "name": "The user is having a new project",
-            "match": {},
+            "match": {
+              "location": "com.daedalus.stepsDef.TestDef.the_user_is_having_a_new_project()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 51000,
-              "status": "skipped"
+              "duration": 133000,
+              "status": "passed"
             },
             "line": 4,
             "name": "The user writes Hello World test",
-            "match": {},
+            "match": {
+              "location": "com.daedalus.stepsDef.TestDef.the_user_writes_hello_world_test()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 30000,
-              "status": "skipped"
+              "duration": 95000,
+              "status": "passed"
             },
             "line": 5,
             "name": "The user should be able to run it and see printed String",
-            "match": {},
+            "match": {
+              "location": "com.daedalus.stepsDef.TestDef.the_user_should_be_able_to_run_it_and_see_printed_string()"
+            },
             "keyword": "Then "
           }
         ]
