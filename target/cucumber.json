@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-09-25T04:26:54.488Z",
+        "start_timestamp": "2021-09-27T17:36:24.818Z",
         "line": 2,
         "name": "Write Hello World",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2858000,
+              "duration": 1770000,
               "status": "passed"
             },
             "line": 3,
@@ -25,7 +25,7 @@
           },
           {
             "result": {
-              "duration": 133000,
+              "duration": 109000,
               "status": "passed"
             },
             "line": 4,
@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 95000,
+              "duration": 83000,
               "status": "passed"
             },
             "line": 5,

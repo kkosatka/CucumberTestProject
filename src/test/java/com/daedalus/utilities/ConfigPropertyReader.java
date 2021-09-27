@@ -1,19 +1,15 @@
 package com.daedalus.utilities;
 
-
-
 import java.util.Properties;
 
 /**
- * This is the utility class for data read write
- *
- * @author QAIT
+ * @author Kasiet
  *
  */
 public class ConfigPropertyReader {
 
     private static String defaultConfigFile = "./config.properties";
-    
+
     /**
      * constructor of this class
      */
@@ -37,7 +33,7 @@ public class ConfigPropertyReader {
             return null;
         }
     }
-    
+
     public static String getProperty(String property){
         return getProperty(defaultConfigFile, property);
     }

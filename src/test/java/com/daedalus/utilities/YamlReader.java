@@ -1,28 +1,43 @@
 package com.daedalus.utilities;
 
-
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.Reader;
 import java.util.Map;
-
+import static com.daedalus.utilities.ConfigPropertyReader.getProperty;
 import org.testng.Reporter;
 import org.yaml.snakeyaml.Yaml;
+
+/**
+ * @author Kasiet
+ *
+ */
+
 
 @SuppressWarnings("unchecked")
 public class YamlReader {
 
-    public static String yamlFilePath = "src/test/resources/testData/Dev_TestData.yml";
-   
+    public static String yamlFilePath = "src/test/resources/testData/Qa_TestData.yml";
+
     public static String setYamlFilePath(String yamlPath){
         yamlFilePath = yamlPath;
         return yamlFilePath;
     }
-        
-    
-   
+
+
+    public static String setYamlFilePath() {
+        String tier = getProperty("config.properties", "tier").trim();
+        if (tier.equalsIgnoreCase("qa")) {
+            yamlFilePath = "src/test/resources/testdata/Qa_TestData.yml";
+        } else if (tier.equalsIgnoreCase("prod")) {
+            yamlFilePath = "src/test/resources/testdata/Prod_TestData.yml";
+        } else {
+            Reporter.log("YOU HAVE PROVIDED WRONG TIER IN CONFIG!!! using dev test data", true);
+        }
+        return yamlFilePath;
+    }
     public static String getYamlValue(String token) {
+        setYamlFilePath();
         try {
             return getValue(token);
         } catch (FileNotFoundException ex) {
@@ -30,8 +45,9 @@ public class YamlReader {
             return null;
         }
     }
-    
+
     public static String getData(String token) {
+
         return getYamlValue(token);
     }
 
@@ -66,7 +82,7 @@ public class YamlReader {
     }
 
     private static Map<String, Object> parseMap(Map<String, Object> object,
-            String token) {
+                                                String token) {
         if (token.contains(".")) {
             String[] st = token.split("\\.");
             object = parseMap((Map<String, Object>) object.get(st[0]),
